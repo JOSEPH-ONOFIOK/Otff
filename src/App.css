@@ -1,0 +1,242 @@
+/* Apply the font globally */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Just Me Again Down Here', sans-serif; /* Apply font globally */
+}
+
+body, html {
+    font-family: 'Just Me Again Down Here', sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: black;
+    overflow-x: hidden;
+}
+
+.header {
+    position: absolute;
+    top: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    padding: 0 20px;
+    color: white;
+}
+
+.title {
+    font-size: 64px;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-item {
+    font-size: 40px;
+    opacity: 1;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.main-content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.subtitle {
+    font-size: 48px;
+    color: white;
+    margin-top: 20px;
+}
+
+.join-button {
+    padding: 12px 40px;
+    border: 1px solid white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.join-text {
+    font-size: 32px;
+    color: white;
+}
+
+.footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 591px;
+    height: auto;
+    padding: 20px;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.form-container.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.form-heading {
+    color: black;
+    font-size: 36px;
+    font-weight: 400;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.form-body {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-button {
+    padding: 10px;
+    background: #eee;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    width: 300px;
+}
+
+.form-button:hover {
+    background-color: #ddd;
+}
+
+.plus-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plus-sign {
+    width: 100%;
+    height: auto;
+}
+
+.form-input {
+    width: 80%;
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px solid black;
+    border-radius: 12px;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.form-submit {
+    padding: 10px;
+    background: black;
+    border: 1px solid black;
+    border-radius: 12px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+}
+
+.form-submit:disabled {
+    cursor: not-allowed;
+}
+
+.form-submit:hover {
+    background-color: blueviolet;
+}
+
+/* Media query for mobile responsiveness */
+@media screen and (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        left: 20px;
+    }
+
+    .title {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .nav-item {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .main-content-wrapper {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .subtitle {
+        font-size: 26px;
+    }
+
+    .form-container {
+        width: 90%;
+    }
+
+    .form-heading {
+        font-size: 24px;
+    }
+
+    .form-input {
+        width: 90%;
+    }
+
+    .form-submit {
+        font-size: 16px;
+    }
+}
